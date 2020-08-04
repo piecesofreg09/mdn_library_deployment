@@ -29,7 +29,7 @@ DEBUG = True
 DEBUG = False
 
 #ALLOWED_HOSTS = ['testserver', '127.0.0.1', '*']
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', ".herokuapp.com"]
 
 # Application definition
 
