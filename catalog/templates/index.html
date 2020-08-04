@@ -1,0 +1,29 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+  <title>Local Library Homepage</title>
+{% endblock %}
+
+{% block content %}
+  <h1>Local Library Home</h1>
+  <p>Welcome to LocalLibrary, a website developed by <em>Winston Lu</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Books:</strong> {{ num_books }}</li>
+    <li><strong>Copies:</strong> {{ num_instances }}</li>
+    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+    <li><strong>Authors:</strong> {{ num_authors }}</li>
+    <li><strong>Genres:</strong> {{ num_genres }}</li>
+    <li><strong>Books that have 'ay':</strong> {{ num_books_ay }}</li>
+    <strong>Details:</strong>
+    <ul>
+      {% for book in books_ay%}
+        <li>{{ book }}</li>
+      {% endfor %}
+    </ul>
+  </ul>
+
+  <p>You have visited this page {{ num_v }}
+  {% if num_v == 1 %} time{% else %} times{% endif %}.</p>
+{% endblock %}
